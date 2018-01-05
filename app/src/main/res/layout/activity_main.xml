@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.steph.tictactoe2.MainActivity">
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:background="@drawable/empty_board"
+        android:columnCount="3"
+        android:rowCount="3"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="70dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:id="@+id/piece_0"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click_func"
+            android:tag="0"
+            tools:layout_editor_absoluteX="128dp"
+            tools:layout_editor_absoluteY="-62dp" />
+
+        <ImageView
+            android:id="@+id/piece_1"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click_func"
+            android:tag="1"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <ImageView
+            android:id="@+id/piece_2"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:onClick="click_func"
+            android:tag="2"
+            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <ImageView
+            android:id="@+id/piece_3"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="click_func"
+            android:tag="3"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="259dp" />
+
+        <ImageView
+            android:id="@+id/piece_4"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="25dp"
+            android:onClick="click_func"
+            android:tag="4"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="259dp" />
+
+        <ImageView
+            android:id="@+id/piece_5"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="click_func"
+            android:tag="5"
+            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteY="252dp" />
+
+        <ImageView
+            android:id="@+id/piece_6"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="30dp"
+            android:onClick="click_func"
+            android:tag="6"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="379dp" />
+
+        <ImageView
+            android:id="@+id/piece_7"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="30dp"
+            android:onClick="click_func"
+            android:tag="7"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="379dp" />
+
+        <ImageView
+            android:id="@+id/piece_8"
+            android:layout_width="108dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:onClick="click_func"
+            android:tag="8"
+            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteY="379dp" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/winner_text"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="default text"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/play_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            android:onClick="play_again"
+            android:text="Click To Play Again" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
